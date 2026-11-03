@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+*.pyc
+professor/
+*.egg-info/
+build/
+dist/
+# Documentos locais
+references-cliente/
+Banco_do_Brasil_Proposta_*.pdf
+
+/Apresentacoes/

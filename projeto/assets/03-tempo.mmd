@@ -1,0 +1,6 @@
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Arial","fontSize":"20px","primaryColor":"#F3F1F2","primaryTextColor":"#232329","primaryBorderColor":"#777782","lineColor":"#64646F","edgeLabelBackground":"#FFFFFF","clusterBkg":"#FAF9FA","clusterBorder":"#B5B5BC"},"flowchart":{"htmlLabels":true,"curve":"linear","nodeSpacing":24,"rankSpacing":32,"padding":14}}}%%
+flowchart LR
+ O["10h01<br/>E09 ocorre"] -->|ainda não recebida| A["10h02<br/>consulta de comparação"]
+ A -->|recebimento de E09| B["10h06<br/>corte das chamadas"]
+ style A fill:#F3F1F2,stroke:#777782
+ style B fill:#ED145B,color:#FFFFFF,stroke:#ED145B

@@ -1,0 +1,13 @@
+flowchart LR
+    gateway["gateway"] --> api["api-transferencias"]
+    api --> limites["consulta-limites"]
+    limites --> banco["db-contas"]
+    subgraph fora["Fora da jornada de transferência"]
+        cache["Cache de marketing<br/>CPU 90%<br/>Fora do fluxo Pix"]
+    end
+    %% O cenário não informa dependência entre o cache de marketing e a transferência.
+    %% Não há aresta entre o cache e os componentes da jornada.
+    classDef componente fill:#17171D,stroke:#17171D,color:#FFFFFF;
+    class gateway,api,limites,banco,cache componente;
+    style fora fill:#FFFFFF,stroke:#AAAAAF,color:#777782
+    linkStyle default stroke:#ED145B,stroke-width:2px
