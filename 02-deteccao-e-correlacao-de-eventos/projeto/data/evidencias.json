@@ -1,0 +1,90 @@
+[
+  {
+    "id": "E01",
+    "servico": "consulta-limites",
+    "observacao": "C01: pool de limites reduzido de 20 para 8.",
+    "ocorrido_em": "2026-11-03T09:50:00-03:00",
+    "recebido_em": "2026-11-03T09:50:00-03:00",
+    "fonte": "Dados sintéticos do laboratório de transferências"
+  },
+  {
+    "id": "E02",
+    "servico": "api-transferencias",
+    "observacao": "API: 80 falhas em 1000 solicitações.",
+    "ocorrido_em": "2026-11-03T10:00:00-03:00",
+    "recebido_em": "2026-11-03T10:00:00-03:00",
+    "fonte": "Dados sintéticos do laboratório de transferências"
+  },
+  {
+    "id": "E03",
+    "servico": "api-transferencias",
+    "observacao": "Duplicata de E02.",
+    "ocorrido_em": "2026-11-03T10:00:00-03:00",
+    "recebido_em": "2026-11-03T10:00:00-03:00",
+    "fonte": "Dados sintéticos do laboratório de transferências"
+  },
+  {
+    "id": "E04",
+    "servico": "consulta-limites",
+    "observacao": "Limites: 8 conexões ativas e 35 solicitações em espera.",
+    "ocorrido_em": "2026-11-03T10:00:00-03:00",
+    "recebido_em": "2026-11-03T10:01:00-03:00",
+    "fonte": "Dados sintéticos do laboratório de transferências"
+  },
+  {
+    "id": "E05",
+    "servico": "cache-marketing",
+    "observacao": "Cache marketing com CPU 90%, fora da jornada.",
+    "ocorrido_em": "2026-11-03T10:01:00-03:00",
+    "recebido_em": "2026-11-03T10:01:00-03:00",
+    "fonte": "Dados sintéticos do laboratório de transferências"
+  },
+  {
+    "id": "E06",
+    "servico": "gateway",
+    "observacao": "Gateway: timeout na jornada.",
+    "ocorrido_em": "2026-11-03T10:01:00-03:00",
+    "recebido_em": "2026-11-03T10:01:00-03:00",
+    "fonte": "Dados sintéticos do laboratório de transferências"
+  },
+  {
+    "id": "E07",
+    "servico": "db-contas",
+    "observacao": "Banco: consulta de referência em 20 ms.",
+    "ocorrido_em": "2026-11-03T10:02:00-03:00",
+    "recebido_em": "2026-11-03T10:02:00-03:00",
+    "fonte": "Dados sintéticos do laboratório de transferências"
+  },
+  {
+    "id": "E08",
+    "servico": "parceiro-externo",
+    "observacao": "Parceiro sem degradação reportada.",
+    "ocorrido_em": "2026-11-03T10:03:00-03:00",
+    "recebido_em": "2026-11-03T10:03:00-03:00",
+    "fonte": "Dados sintéticos do laboratório de transferências"
+  },
+  {
+    "id": "E09",
+    "servico": "db-contas",
+    "observacao": "Banco: CPU 35%; recepção atrasada.",
+    "ocorrido_em": "2026-11-03T10:01:00-03:00",
+    "recebido_em": "2026-11-03T10:06:00-03:00",
+    "fonte": "Dados sintéticos do laboratório de transferências"
+  },
+  {
+    "id": "E10",
+    "servico": "consulta-limites",
+    "observacao": "C02: pool restaurado para 20 por decisão humana no caso.",
+    "ocorrido_em": "2026-11-03T10:12:00-03:00",
+    "recebido_em": "2026-11-03T10:12:00-03:00",
+    "fonte": "Dados sintéticos do laboratório de transferências"
+  },
+  {
+    "id": "E11",
+    "servico": "api-transferencias",
+    "observacao": "API: redução de falhas após mitigação.",
+    "ocorrido_em": "2026-11-03T10:15:00-03:00",
+    "recebido_em": "2026-11-03T10:15:00-03:00",
+    "fonte": "Dados sintéticos do laboratório de transferências"
+  }
+]

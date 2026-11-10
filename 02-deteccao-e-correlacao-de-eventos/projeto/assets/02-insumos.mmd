@@ -1,0 +1,6 @@
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Arial","fontSize":"20px","primaryColor":"#f8edf3","primaryBorderColor":"#a61b59","primaryTextColor":"#231d28","lineColor":"#594653","secondaryColor":"#f1edf5","tertiaryColor":"#fffafc","actorBkg":"#f8edf3","actorBorder":"#a61b59","actorTextColor":"#231d28","signalColor":"#594653","signalTextColor":"#231d28"}}}%%
+flowchart LR
+  E["Eventos<br/>Ocorrência e recebimento"] --> T["Triagem"]
+  M["Métricas<br/>Contagens e p95 por janela"] --> T
+  C["Contexto<br/>Jornada e vínculos conhecidos"] --> T
+  T --> D["Dossiê<br/>Decisão, motivos e lacunas"]

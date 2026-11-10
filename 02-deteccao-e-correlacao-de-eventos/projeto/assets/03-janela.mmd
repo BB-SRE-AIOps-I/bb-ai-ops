@@ -1,0 +1,6 @@
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Arial","fontSize":"20px","primaryColor":"#f8edf3","primaryBorderColor":"#a61b59","primaryTextColor":"#231d28","lineColor":"#594653","secondaryColor":"#f1edf5","tertiaryColor":"#fffafc","actorBkg":"#f8edf3","actorBorder":"#a61b59","actorTextColor":"#231d28","signalColor":"#594653","signalTextColor":"#231d28"}}}%%
+flowchart LR
+  A["10h00<br/>Janela começa"] --> B["10h02<br/>Agregado ainda aberto"]
+  B --> C["10h05<br/>Janela fecha"]
+  C --> D["80 falhas em<br/>1.000 solicitações"]
+  E["E02 já recebido<br/>Relato sem janela informada"] -.-> B

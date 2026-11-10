@@ -1,0 +1,8 @@
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Arial","fontSize":"20px","primaryColor":"#f8edf3","primaryBorderColor":"#a61b59","primaryTextColor":"#231d28","lineColor":"#594653","secondaryColor":"#f1edf5","tertiaryColor":"#fffafc","actorBkg":"#f8edf3","actorBorder":"#a61b59","actorTextColor":"#231d28","signalColor":"#594653","signalTextColor":"#231d28"}}}%%
+flowchart LR
+    A["E02<br/>Falhas da API"] --> G["Investigar<br/>jornada Pix"]
+    B["E03<br/>Cópia conhecida"] -. "repete" .-> A
+    C["E04<br/>Espera por conexão"] --> G
+    D["E06<br/>Timeout"] --> G
+    X["E05<br/>CPU do cache"] --> S["Fora da jornada"]
+    P["E08<br/>Relato sobre parceiro"] --> H["Contexto de hipótese"]

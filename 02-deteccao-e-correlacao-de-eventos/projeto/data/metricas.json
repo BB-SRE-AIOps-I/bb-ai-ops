@@ -1,0 +1,58 @@
+[
+  {
+    "inicio": "2026-11-03T09:50:00-03:00",
+    "minutos": 5,
+    "solicitacoes": 1000,
+    "falhas": 1,
+    "p95_ms": 150,
+    "fonte": "Série sintética de métricas do laboratório de transferências"
+  },
+  {
+    "inicio": "2026-11-03T09:55:00-03:00",
+    "minutos": 5,
+    "solicitacoes": 1000,
+    "falhas": 1,
+    "p95_ms": 155,
+    "fonte": "Série sintética de métricas do laboratório de transferências"
+  },
+  {
+    "inicio": "2026-11-03T10:00:00-03:00",
+    "minutos": 5,
+    "solicitacoes": 1000,
+    "falhas": 80,
+    "p95_ms": 900,
+    "fonte": "Série sintética de métricas do laboratório de transferências"
+  },
+  {
+    "inicio": "2026-11-03T10:05:00-03:00",
+    "minutos": 5,
+    "solicitacoes": 1000,
+    "falhas": 85,
+    "p95_ms": 950,
+    "fonte": "Série sintética de métricas do laboratório de transferências"
+  },
+  {
+    "inicio": "2026-11-03T10:10:00-03:00",
+    "minutos": 5,
+    "solicitacoes": 1000,
+    "falhas": 75,
+    "p95_ms": 880,
+    "fonte": "Série sintética de métricas do laboratório de transferências"
+  },
+  {
+    "inicio": "2026-11-03T10:15:00-03:00",
+    "minutos": 5,
+    "solicitacoes": 1000,
+    "falhas": 2,
+    "p95_ms": 170,
+    "fonte": "Série sintética de métricas do laboratório de transferências"
+  },
+  {
+    "inicio": "2026-11-03T10:20:00-03:00",
+    "minutos": 5,
+    "solicitacoes": 1000,
+    "falhas": 1,
+    "p95_ms": 160,
+    "fonte": "Série sintética de métricas do laboratório de transferências"
+  }
+]

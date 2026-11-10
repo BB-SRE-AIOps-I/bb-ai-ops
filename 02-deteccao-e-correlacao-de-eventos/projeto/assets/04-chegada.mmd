@@ -1,0 +1,11 @@
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Arial","fontSize":"20px","primaryColor":"#f8edf3","primaryBorderColor":"#a61b59","primaryTextColor":"#231d28","lineColor":"#594653","secondaryColor":"#f1edf5","tertiaryColor":"#fffafc","actorBkg":"#f8edf3","actorBorder":"#a61b59","actorTextColor":"#231d28","signalColor":"#594653","signalTextColor":"#231d28"}}}%%
+sequenceDiagram
+    participant B as Banco de contas
+    participant R as Base de evidências
+    participant T as Triagem
+    B->>B: 10h01 · CPU observada em 35%
+    T->>R: 10h05 · consultar registros disponíveis
+    R-->>T: E09 ainda não recebido
+    B->>R: 10h06 · chega o registro E09
+    T->>R: Consultar no novo corte
+    R-->>T: E09 disponível · ocorrência às 10h01
