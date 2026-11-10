@@ -7,7 +7,7 @@ O cenário não descreve a infraestrutura nem as políticas do Banco do Brasil. 
 ## Comece aqui
 
 1. Abra esta pasta no VS Code.
-2. Abra [01-demonstracao.ipynb](01-fundamentos-aiops/01-demonstracao.ipynb): ele explica o caso, os termos e cada passagem do código.
+2. Abra [01-fundamentos-de-aiops.ipynb](01-fundamentos-aiops/01-fundamentos-de-aiops.ipynb): ele explica o caso, os termos e cada passagem do código.
 3. Para participar sem programar, vá à seção **Atividade: propor um piloto de AIOps**, no final do notebook. Escolha médio ou hard e responda em texto ou tabela.
 
 ## Preparar para executar o notebook
@@ -61,7 +61,7 @@ Se o recorte estiver vazio, o workflow encerra sem chamar o modelo. Uma entrada 
 | `projeto/src/aiops/modelo.py` | Prepara mensagens, cliente e chamada real |
 | `projeto/src/aiops/validacao.py` | Confere estrutura e IDs citados |
 | `projeto/src/aiops/apresentacao.py` | Organiza tabelas sem repetir inferências |
-| `01-fundamentos-aiops/01-demonstracao.ipynb` | Explica os conceitos e constrói os nós e conexões |
+| `01-fundamentos-aiops/01-fundamentos-de-aiops.ipynb` | Explica os conceitos e constrói os nós e conexões |
 
 ## Como interpretar os resultados
 

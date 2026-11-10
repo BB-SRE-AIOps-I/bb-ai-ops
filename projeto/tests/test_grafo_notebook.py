@@ -16,7 +16,7 @@ from aiops.validacao import validar_evidencias, verificar_resumo
 from test_recorte_e_contratos import instante, resumo
 
 
-NOTEBOOK = Path(__file__).resolve().parents[2] / "01-fundamentos-aiops" / "01-demonstracao.ipynb"
+NOTEBOOK = Path(__file__).resolve().parents[2] / "01-fundamentos-aiops" / "01-fundamentos-de-aiops.ipynb"
 
 
 # Exercita as células reais do grafo, trocando apenas a chamada de IA por um dublê de teste.
