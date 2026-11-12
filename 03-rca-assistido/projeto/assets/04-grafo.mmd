@@ -1,0 +1,16 @@
+flowchart TD
+START --> P["preparar_contexto"]
+P -->|candidato| T["montar_linha_tempo"]
+P -->|sem candidato| E["encerrar_sem_analise"]
+T --> R["recuperar_documentacao"]
+R -->|documentos| A["analisar_hipoteses<br/>LLM"]
+R -->|busca vazia| E
+A --> V["validar_referencias<br/>Python"]
+V -->|válidas| M["montar_postmortem"]
+V -->|falha ou referência inválida| X["encerrar_com_pendencias"]
+M --> H["revisar_postmortem<br/>interrupt"]
+H -->|revisar com comentário| A
+H -->|aprovar| F["finalizar"]
+E --> END
+X --> END
+F --> END

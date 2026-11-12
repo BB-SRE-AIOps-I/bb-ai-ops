@@ -1,0 +1,11 @@
+flowchart TD
+N["Notebook<br/>pergunta e configuração"] --> S["Sessão compartilhada<br/>sessao.py"]
+D["Dossiê, eventos,<br/>métricas e trace"] --> G["LangGraph<br/>workflow.py"]
+S --> G
+R["Runbooks sintéticos"] --> E["FastEmbed local<br/>trechos e vetores"] --> C["Chroma local<br/>índice persistido"]
+C --> G
+G --> L["LLM escolhido<br/>OpenAI OU Ollama"]
+L --> V["Pydantic + referências<br/>estrutura e IDs"]
+V --> H["Revisão humana<br/>interrupt / resume"]
+H --> P["Postmortem revisado<br/>hipóteses e ações propostas"]
+G <--> Q["SQLite<br/>checkpoint da execução"]

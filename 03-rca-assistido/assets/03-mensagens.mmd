@@ -1,0 +1,9 @@
+flowchart LR
+    S["SYSTEM<br/>Instrução da tarefa"]
+    U["USER<br/>Contexto convertido em texto"]
+    S --> O["Uma chamada ao Ollama"]
+    U --> O
+    O --> R["JSON gerado<br/>Resumo, IDs e perguntas"]
+    R --> V["Python: estrutura e IDs<br/>Pessoa: afirmações"]
+    classDef destaque fill:#fff0f6,stroke:#df0063,stroke-width:2px,color:#191923;
+    class O destaque;

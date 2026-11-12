@@ -1,0 +1,128 @@
+{
+  "dossie": {
+    "corte": "2026-11-03T10:02:00-03:00",
+    "status": "dados_insuficientes",
+    "medicao": {
+      "inicio": "2026-11-03T10:00:00-03:00",
+      "fim": "2026-11-03T10:05:00-03:00",
+      "solicitacoes": null,
+      "falhas": null,
+      "taxa_erro": null,
+      "burn_rate": null,
+      "p95_ms": null,
+      "p95_referencia_ms": 152.5,
+      "inicios_referencia": [
+        "2026-11-03T09:50:00-03:00",
+        "2026-11-03T09:55:00-03:00"
+      ],
+      "janelas_referencia": [
+        {
+          "inicio": "2026-11-03T09:50:00-03:00",
+          "minutos": 5,
+          "solicitacoes": 1000,
+          "falhas": 1,
+          "p95_ms": 150.0,
+          "fonte": "Série sintética de métricas do laboratório de transferências"
+        },
+        {
+          "inicio": "2026-11-03T09:55:00-03:00",
+          "minutos": 5,
+          "solicitacoes": 1000,
+          "falhas": 1,
+          "p95_ms": 155.0,
+          "fonte": "Série sintética de métricas do laboratório de transferências"
+        }
+      ],
+      "lacunas": [
+        "A janela-alvo ainda está aberta."
+      ]
+    },
+    "parametros": {
+      "slo_sucesso": 0.999,
+      "limiar_taxa_erro": 0.01,
+      "fator_p95": 2.0,
+      "minutos_associacao_anteriores": 10
+    },
+    "criterios": [
+      {
+        "indicador": "taxa_erro",
+        "valor": null,
+        "limiar": 0.01,
+        "resultado": "indisponivel",
+        "motivo": "A taxa exige uma janela fechada com solicitações."
+      },
+      {
+        "indicador": "p95",
+        "valor": null,
+        "limiar": 305.0,
+        "resultado": "indisponivel",
+        "motivo": "A comparação exige p95 observado e referência válida."
+      }
+    ],
+    "gatilhos": [],
+    "evidencias_recebidas": [
+      {
+        "id": "E01",
+        "servico": "consulta-limites",
+        "observacao": "C01: pool de limites reduzido de 20 para 8.",
+        "ocorrido_em": "2026-11-03T09:50:00-03:00",
+        "recebido_em": "2026-11-03T09:50:00-03:00",
+        "fonte": "Dados sintéticos do laboratório de transferências"
+      },
+      {
+        "id": "E02",
+        "servico": "api-transferencias",
+        "observacao": "API: 80 falhas em 1000 solicitações.",
+        "ocorrido_em": "2026-11-03T10:00:00-03:00",
+        "recebido_em": "2026-11-03T10:00:00-03:00",
+        "fonte": "Dados sintéticos do laboratório de transferências"
+      },
+      {
+        "id": "E03",
+        "servico": "api-transferencias",
+        "observacao": "Duplicata de E02.",
+        "ocorrido_em": "2026-11-03T10:00:00-03:00",
+        "recebido_em": "2026-11-03T10:00:00-03:00",
+        "fonte": "Dados sintéticos do laboratório de transferências"
+      },
+      {
+        "id": "E04",
+        "servico": "consulta-limites",
+        "observacao": "Limites: 8 conexões ativas e 35 solicitações em espera.",
+        "ocorrido_em": "2026-11-03T10:00:00-03:00",
+        "recebido_em": "2026-11-03T10:01:00-03:00",
+        "fonte": "Dados sintéticos do laboratório de transferências"
+      },
+      {
+        "id": "E05",
+        "servico": "cache-marketing",
+        "observacao": "Cache marketing com CPU 90%, fora da jornada.",
+        "ocorrido_em": "2026-11-03T10:01:00-03:00",
+        "recebido_em": "2026-11-03T10:01:00-03:00",
+        "fonte": "Dados sintéticos do laboratório de transferências"
+      },
+      {
+        "id": "E06",
+        "servico": "gateway",
+        "observacao": "Gateway: timeout na jornada.",
+        "ocorrido_em": "2026-11-03T10:01:00-03:00",
+        "recebido_em": "2026-11-03T10:01:00-03:00",
+        "fonte": "Dados sintéticos do laboratório de transferências"
+      },
+      {
+        "id": "E07",
+        "servico": "db-contas",
+        "observacao": "Banco: consulta de referência em 20 ms.",
+        "ocorrido_em": "2026-11-03T10:02:00-03:00",
+        "recebido_em": "2026-11-03T10:02:00-03:00",
+        "fonte": "Dados sintéticos do laboratório de transferências"
+      }
+    ],
+    "classificacoes": [],
+    "lacunas": [
+      "A janela-alvo ainda está aberta."
+    ],
+    "fila": []
+  },
+  "contexto_rca": null
+}

@@ -1,0 +1,9 @@
+{
+  "cenario": "Pix fictício, incidente 03/11/2026",
+  "triagem": "Saídas de montar_grafo_triagem e contexto_rca da Aula02, calculadas sem LLM. Arquivos autocontidos; nenhuma importação da aula anterior em tempo de uso.",
+  "sha256_dados_aula02": {
+    "evidencias.json": "09a5e6340801c18f6821073233409d6c581ed69fef7510011e78deaa8c4598bf",
+    "metricas.json": "c623571ebf969ed8c7ae7027c83350cc974f0edcb11d2dce9a4b7fd96a486033"
+  },
+  "trace": "Material original RCA do CoE; disponibilização desconhecida; anexo apenas retrospectivo."
+}

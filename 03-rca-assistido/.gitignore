@@ -1,0 +1,12 @@
+professor/
+**/.env
+**/.env.*
+!**/.env.example
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.ipynb_checkpoints/
+projeto/dados_locais/*
+!projeto/dados_locais/README.md
+.work/
+/03-rca-assistido-por-ia-ollama.local.ipynb

@@ -1,0 +1,5 @@
+flowchart LR
+V["validar_referencias"] -->|válidas| N["propor_verificacoes<br/>novo nó LLM"]
+N --> M["montar_postmortem"] --> H["revisar_postmortem"]
+V -->|inválidas| X["encerrar_com_pendencias"]
+N -.-> C["Por hipótese:<br/>dado a coletar<br/>resultado favorável<br/>resultado contrário"]

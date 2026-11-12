@@ -1,0 +1,5 @@
+flowchart TD
+T["T01 · uma requisição · 920 ms<br/>Resultado não informado"] --> L["Consulta de limites · 800 ms"]
+L --> W["Espera por conexão · 650 ms"]
+L --> Q["Consulta ao banco · 20 ms"]
+T -.-> N["Durações aninhadas<br/>não somar pai e filhos<br/>não representa o p95"]

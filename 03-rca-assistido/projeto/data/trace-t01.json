@@ -1,0 +1,29 @@
+{
+  "id": "T01",
+  "ocorrido_em": "2026-11-03T10:01:00-03:00",
+  "recebido_em": null,
+  "proveniencia": "Cenário sintético CoE, desafio RCA; anexo retrospectivo. Recebimento não informado.",
+  "resultado_requisicao": null,
+  "spans": [
+    {
+      "id": "jornada",
+      "pai": null,
+      "duracao_ms": 920
+    },
+    {
+      "id": "consulta-limites",
+      "pai": "jornada",
+      "duracao_ms": 800
+    },
+    {
+      "id": "espera-conexao",
+      "pai": "consulta-limites",
+      "duracao_ms": 650
+    },
+    {
+      "id": "consulta-banco",
+      "pai": "consulta-limites",
+      "duracao_ms": 20
+    }
+  ]
+}

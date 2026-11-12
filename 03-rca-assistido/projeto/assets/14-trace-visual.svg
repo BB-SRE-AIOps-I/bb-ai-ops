@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="330" viewBox="0 0 1000 330"><rect width="1000" height="330" fill="white"/><g font-family="Arial,sans-serif" fill="#262333">
+<rect x="14" y="15" width="972" height="264" rx="15" fill="#f1eef4"/>
+<text x="36" y="52" font-size="23" font-weight="700">T01 · Uma requisição: 920 ms</text>
+<rect x="50" y="76" width="894" height="174" rx="12" fill="#e2dce8"/>
+<text x="72" y="109" font-size="21" font-weight="700">Dentro dela: consulta de limites · 800 ms</text>
+<rect x="76" y="132" width="406" height="88" rx="8" fill="#ed0755"/>
+<text x="100" y="169" font-size="21" fill="white" font-weight="700">Espera por conexão</text><text x="100" y="200" font-size="24" fill="white">650 ms</text>
+<rect x="510" y="132" width="406" height="88" rx="8" fill="#262333"/>
+<text x="534" y="169" font-size="21" fill="white" font-weight="700">Consulta ao banco</text><text x="534" y="200" font-size="24" fill="white">20 ms</text>
+<text x="18" y="310" font-size="17">Caixas indicam inclusão, não escala de tempo. Não some pai e filhos; um trace não é o p95.</text>
+</g></svg>

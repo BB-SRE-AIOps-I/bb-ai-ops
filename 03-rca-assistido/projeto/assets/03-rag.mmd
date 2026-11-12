@@ -1,0 +1,4 @@
+flowchart LR
+D["Runbooks<br/>texto e metadados"] --> T["Seções e trechos<br/>até 100 tokens"]
+T --> E["FastEmbed local<br/>vetor de cada trecho"]
+E --> C["Chroma + manifesto<br/>corpus, modelo e regra"]

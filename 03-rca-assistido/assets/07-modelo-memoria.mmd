@@ -1,0 +1,6 @@
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Arial","fontSize":"16px","primaryColor":"#f5f3f7","primaryTextColor":"#22222b","primaryBorderColor":"#bab5c1","lineColor":"#74707a"},"flowchart":{"htmlLabels":true,"curve":"linear","nodeSpacing":22,"rankSpacing":28}}}%%
+flowchart LR
+ I["Catálogo"] -->|"baixar"| D["Disco<br/>pesos instalados"]
+ D -->|"carregar"| M["RAM / VRAM<br/>modelo + contexto"]
+ M --> R["Gerar<br/>resposta"]
+ style M fill:#fff0f6,stroke:#ed0755,stroke-width:2px

@@ -71,3 +71,9 @@ Se o recorte estiver vazio, o workflow encerra sem chamar o modelo. Uma entrada 
 - As respostas ficam na memória do kernel. Reiniciar o kernel apaga as variáveis, mesmo que as saídas anteriores continuem visíveis no notebook.
 - A conferência de IDs não garante que cada frase esteja correta. Compare as afirmações com as observações citadas.
 - `AGUARDANDO_REVISAO` informa que o grafo terminou e o rascunho precisa de leitura humana. Não há pausa e retomada de aprovação implementadas.
+
+## Aula 03 · RCA assistido por IA
+
+- [Guia e arquivos da Aula 03](03-rca-assistido/README.md)
+- [Extra de Ollama](03-rca-assistido/00-extra-ollama.ipynb)
+- [Notebook de RCA com OpenAI ou Ollama](03-rca-assistido/03-rca-assistido-por-ia.ipynb)

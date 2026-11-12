@@ -1,0 +1,19 @@
+sequenceDiagram
+participant N as Notebook / pessoa
+participant G as Grafo
+participant DB as SQLite
+participant L as Modelo
+N->>G: Nova investigação (UUID novo)
+G->>L: Analisar evidências
+L-->>G: Hipóteses estruturadas
+G->>DB: Checkpoint + versão do postmortem
+G-->>N: interrupt: aguardar decisão
+N->>G: Consultar estado salvo
+G-->>N: Mesmo rascunho, sem inferência
+N->>G: Command(resume): versão e decisão
+alt solicitar revisão
+G->>L: Nova análise com comentário
+G-->>N: Nova pausa para leitura
+else aprovar
+G-->>N: Finalizar versão revisada
+end

@@ -1,0 +1,5 @@
+flowchart LR
+O["Ocorrências<br/>rankings intercalados"] --> U["Deduplicar por ID<br/>preservar consultas"]
+U --> S["Até 6 trechos<br/>registrar descartes"]
+S --> M["LLM recebe trechos<br/>e observações do caso"]
+M --> V["Conferir citações<br/>contra fontes enviadas"]

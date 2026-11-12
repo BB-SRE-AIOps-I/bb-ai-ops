@@ -1,0 +1,9 @@
+flowchart TD
+    START(["START"]) --> verificar_contexto["verificar_contexto<br/>Python · existe contexto?"]
+    verificar_contexto -->|"explicar · sim"| explicar_triagem["explicar_triagem<br/>Uma chamada ao modelo"]
+    verificar_contexto -->|"encerrar · não"| informar_ausencia["informar_ausencia<br/>Python · apresentar motivo"]
+    explicar_triagem --> conferir_referencias["conferir_referencias<br/>Python · IDs presentes e únicos"]
+    conferir_referencias --> END(["END"])
+    informar_ausencia --> END
+    classDef destaque fill:#fff0f6,stroke:#df0063,stroke-width:2px,color:#191923;
+    class explicar_triagem destaque;

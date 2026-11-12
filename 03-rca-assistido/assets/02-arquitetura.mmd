@@ -1,0 +1,9 @@
+flowchart LR
+    D["Contexto Pix<br/>Arquivo JSON"] --> N["Notebook Python<br/>Nós LangGraph"]
+    N <--> O["Servidor Ollama<br/>HTTP /api/chat"]
+    O <--> M["Modelo em memória<br/>CPU e/ou GPU"]
+    C["Catálogo Ollama"] --> P["Pesos no disco<br/>Download prévio"]
+    P --> M
+    N --> V["Estrutura e IDs: Python<br/>Interpretação: pessoa"]
+    classDef destaque fill:#fff0f6,stroke:#df0063,stroke-width:2px,color:#191923;
+    class O,M destaque;

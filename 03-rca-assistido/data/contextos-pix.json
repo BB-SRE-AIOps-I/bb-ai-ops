@@ -1,0 +1,102 @@
+{
+  "origem": "Dados sintéticos da Aula 02. Saídas de montar_grafo_triagem e do recorte preparar_contexto_rca. Incidente de 03/11/2026; tutorial de 12/11/2026.",
+  "casos": {
+    "10:02": {
+      "corte": "2026-11-03T10:02:00-03:00",
+      "status_triagem": "dados_insuficientes",
+      "motivo": "A janela-alvo ainda está aberta.",
+      "contexto_rca": null
+    },
+    "10:05": {
+      "corte": "2026-11-03T10:05:00-03:00",
+      "status_triagem": "candidato",
+      "motivo": "",
+      "contexto_rca": {
+        "janela": [
+          "2026-11-03T10:00:00-03:00",
+          "2026-11-03T10:05:00-03:00"
+        ],
+        "corte": "2026-11-03T10:05:00-03:00",
+        "taxa_erro": 0.08,
+        "evidencias": [
+          {
+            "id": "E01",
+            "servico": "consulta-limites",
+            "observacao": "C01: pool de limites reduzido de 20 para 8."
+          },
+          {
+            "id": "E02",
+            "servico": "api-transferencias",
+            "observacao": "API: 80 falhas em 1000 solicitações."
+          },
+          {
+            "id": "E04",
+            "servico": "consulta-limites",
+            "observacao": "Limites: 8 conexões ativas e 35 solicitações em espera."
+          },
+          {
+            "id": "E06",
+            "servico": "gateway",
+            "observacao": "Gateway: timeout na jornada."
+          },
+          {
+            "id": "E07",
+            "servico": "db-contas",
+            "observacao": "Banco: consulta de referência em 20 ms."
+          }
+        ],
+        "lacunas": [
+          "A associação por horário e jornada ainda exige investigação de causa."
+        ]
+      }
+    },
+    "10:06": {
+      "corte": "2026-11-03T10:06:00-03:00",
+      "status_triagem": "candidato",
+      "motivo": "",
+      "contexto_rca": {
+        "janela": [
+          "2026-11-03T10:00:00-03:00",
+          "2026-11-03T10:05:00-03:00"
+        ],
+        "corte": "2026-11-03T10:06:00-03:00",
+        "taxa_erro": 0.08,
+        "evidencias": [
+          {
+            "id": "E01",
+            "servico": "consulta-limites",
+            "observacao": "C01: pool de limites reduzido de 20 para 8."
+          },
+          {
+            "id": "E02",
+            "servico": "api-transferencias",
+            "observacao": "API: 80 falhas em 1000 solicitações."
+          },
+          {
+            "id": "E04",
+            "servico": "consulta-limites",
+            "observacao": "Limites: 8 conexões ativas e 35 solicitações em espera."
+          },
+          {
+            "id": "E06",
+            "servico": "gateway",
+            "observacao": "Gateway: timeout na jornada."
+          },
+          {
+            "id": "E09",
+            "servico": "db-contas",
+            "observacao": "Banco: CPU 35%; recepção atrasada."
+          },
+          {
+            "id": "E07",
+            "servico": "db-contas",
+            "observacao": "Banco: consulta de referência em 20 ms."
+          }
+        ],
+        "lacunas": [
+          "A associação por horário e jornada ainda exige investigação de causa."
+        ]
+      }
+    }
+  }
+}

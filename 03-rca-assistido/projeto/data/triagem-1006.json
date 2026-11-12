@@ -1,0 +1,319 @@
+{
+  "dossie": {
+    "corte": "2026-11-03T10:06:00-03:00",
+    "status": "candidato",
+    "medicao": {
+      "inicio": "2026-11-03T10:00:00-03:00",
+      "fim": "2026-11-03T10:05:00-03:00",
+      "solicitacoes": 1000,
+      "falhas": 80,
+      "taxa_erro": 0.08,
+      "burn_rate": 79.99999999999993,
+      "p95_ms": 900.0,
+      "p95_referencia_ms": 152.5,
+      "inicios_referencia": [
+        "2026-11-03T09:50:00-03:00",
+        "2026-11-03T09:55:00-03:00"
+      ],
+      "janelas_referencia": [
+        {
+          "inicio": "2026-11-03T09:50:00-03:00",
+          "minutos": 5,
+          "solicitacoes": 1000,
+          "falhas": 1,
+          "p95_ms": 150.0,
+          "fonte": "Série sintética de métricas do laboratório de transferências"
+        },
+        {
+          "inicio": "2026-11-03T09:55:00-03:00",
+          "minutos": 5,
+          "solicitacoes": 1000,
+          "falhas": 1,
+          "p95_ms": 155.0,
+          "fonte": "Série sintética de métricas do laboratório de transferências"
+        }
+      ],
+      "lacunas": []
+    },
+    "parametros": {
+      "slo_sucesso": 0.999,
+      "limiar_taxa_erro": 0.01,
+      "fator_p95": 2.0,
+      "minutos_associacao_anteriores": 10
+    },
+    "criterios": [
+      {
+        "indicador": "taxa_erro",
+        "valor": 0.08,
+        "limiar": 0.01,
+        "resultado": "disparou",
+        "motivo": "Valor atingiu ou excedeu o limiar."
+      },
+      {
+        "indicador": "p95",
+        "valor": 900.0,
+        "limiar": 305.0,
+        "resultado": "disparou",
+        "motivo": "Valor atingiu ou excedeu o limiar."
+      }
+    ],
+    "gatilhos": [
+      "taxa_erro",
+      "p95"
+    ],
+    "evidencias_recebidas": [
+      {
+        "id": "E01",
+        "servico": "consulta-limites",
+        "observacao": "C01: pool de limites reduzido de 20 para 8.",
+        "ocorrido_em": "2026-11-03T09:50:00-03:00",
+        "recebido_em": "2026-11-03T09:50:00-03:00",
+        "fonte": "Dados sintéticos do laboratório de transferências"
+      },
+      {
+        "id": "E02",
+        "servico": "api-transferencias",
+        "observacao": "API: 80 falhas em 1000 solicitações.",
+        "ocorrido_em": "2026-11-03T10:00:00-03:00",
+        "recebido_em": "2026-11-03T10:00:00-03:00",
+        "fonte": "Dados sintéticos do laboratório de transferências"
+      },
+      {
+        "id": "E03",
+        "servico": "api-transferencias",
+        "observacao": "Duplicata de E02.",
+        "ocorrido_em": "2026-11-03T10:00:00-03:00",
+        "recebido_em": "2026-11-03T10:00:00-03:00",
+        "fonte": "Dados sintéticos do laboratório de transferências"
+      },
+      {
+        "id": "E04",
+        "servico": "consulta-limites",
+        "observacao": "Limites: 8 conexões ativas e 35 solicitações em espera.",
+        "ocorrido_em": "2026-11-03T10:00:00-03:00",
+        "recebido_em": "2026-11-03T10:01:00-03:00",
+        "fonte": "Dados sintéticos do laboratório de transferências"
+      },
+      {
+        "id": "E05",
+        "servico": "cache-marketing",
+        "observacao": "Cache marketing com CPU 90%, fora da jornada.",
+        "ocorrido_em": "2026-11-03T10:01:00-03:00",
+        "recebido_em": "2026-11-03T10:01:00-03:00",
+        "fonte": "Dados sintéticos do laboratório de transferências"
+      },
+      {
+        "id": "E06",
+        "servico": "gateway",
+        "observacao": "Gateway: timeout na jornada.",
+        "ocorrido_em": "2026-11-03T10:01:00-03:00",
+        "recebido_em": "2026-11-03T10:01:00-03:00",
+        "fonte": "Dados sintéticos do laboratório de transferências"
+      },
+      {
+        "id": "E09",
+        "servico": "db-contas",
+        "observacao": "Banco: CPU 35%; recepção atrasada.",
+        "ocorrido_em": "2026-11-03T10:01:00-03:00",
+        "recebido_em": "2026-11-03T10:06:00-03:00",
+        "fonte": "Dados sintéticos do laboratório de transferências"
+      },
+      {
+        "id": "E07",
+        "servico": "db-contas",
+        "observacao": "Banco: consulta de referência em 20 ms.",
+        "ocorrido_em": "2026-11-03T10:02:00-03:00",
+        "recebido_em": "2026-11-03T10:02:00-03:00",
+        "fonte": "Dados sintéticos do laboratório de transferências"
+      },
+      {
+        "id": "E08",
+        "servico": "parceiro-externo",
+        "observacao": "Parceiro sem degradação reportada.",
+        "ocorrido_em": "2026-11-03T10:03:00-03:00",
+        "recebido_em": "2026-11-03T10:03:00-03:00",
+        "fonte": "Dados sintéticos do laboratório de transferências"
+      }
+    ],
+    "classificacoes": [
+      {
+        "evidencia": {
+          "id": "E01",
+          "servico": "consulta-limites",
+          "observacao": "C01: pool de limites reduzido de 20 para 8.",
+          "ocorrido_em": "2026-11-03T09:50:00-03:00",
+          "recebido_em": "2026-11-03T09:50:00-03:00",
+          "fonte": "Dados sintéticos do laboratório de transferências"
+        },
+        "classe": "relacionado",
+        "motivo": "Serviço no caminho do Pix e ocorrência dentro do intervalo.",
+        "original_id": null
+      },
+      {
+        "evidencia": {
+          "id": "E02",
+          "servico": "api-transferencias",
+          "observacao": "API: 80 falhas em 1000 solicitações.",
+          "ocorrido_em": "2026-11-03T10:00:00-03:00",
+          "recebido_em": "2026-11-03T10:00:00-03:00",
+          "fonte": "Dados sintéticos do laboratório de transferências"
+        },
+        "classe": "relacionado",
+        "motivo": "Serviço no caminho do Pix e ocorrência dentro do intervalo.",
+        "original_id": null
+      },
+      {
+        "evidencia": {
+          "id": "E03",
+          "servico": "api-transferencias",
+          "observacao": "Duplicata de E02.",
+          "ocorrido_em": "2026-11-03T10:00:00-03:00",
+          "recebido_em": "2026-11-03T10:00:00-03:00",
+          "fonte": "Dados sintéticos do laboratório de transferências"
+        },
+        "classe": "duplicata",
+        "motivo": "Repete o alerta E02. A cópia fica registrada para conferência.",
+        "original_id": "E02"
+      },
+      {
+        "evidencia": {
+          "id": "E04",
+          "servico": "consulta-limites",
+          "observacao": "Limites: 8 conexões ativas e 35 solicitações em espera.",
+          "ocorrido_em": "2026-11-03T10:00:00-03:00",
+          "recebido_em": "2026-11-03T10:01:00-03:00",
+          "fonte": "Dados sintéticos do laboratório de transferências"
+        },
+        "classe": "relacionado",
+        "motivo": "Serviço no caminho do Pix e ocorrência dentro do intervalo.",
+        "original_id": null
+      },
+      {
+        "evidencia": {
+          "id": "E05",
+          "servico": "cache-marketing",
+          "observacao": "Cache marketing com CPU 90%, fora da jornada.",
+          "ocorrido_em": "2026-11-03T10:01:00-03:00",
+          "recebido_em": "2026-11-03T10:01:00-03:00",
+          "fonte": "Dados sintéticos do laboratório de transferências"
+        },
+        "classe": "fora_da_jornada",
+        "motivo": "O mapa do caso não liga este cache ao caminho do Pix.",
+        "original_id": null
+      },
+      {
+        "evidencia": {
+          "id": "E06",
+          "servico": "gateway",
+          "observacao": "Gateway: timeout na jornada.",
+          "ocorrido_em": "2026-11-03T10:01:00-03:00",
+          "recebido_em": "2026-11-03T10:01:00-03:00",
+          "fonte": "Dados sintéticos do laboratório de transferências"
+        },
+        "classe": "relacionado",
+        "motivo": "Serviço no caminho do Pix e ocorrência dentro do intervalo.",
+        "original_id": null
+      },
+      {
+        "evidencia": {
+          "id": "E09",
+          "servico": "db-contas",
+          "observacao": "Banco: CPU 35%; recepção atrasada.",
+          "ocorrido_em": "2026-11-03T10:01:00-03:00",
+          "recebido_em": "2026-11-03T10:06:00-03:00",
+          "fonte": "Dados sintéticos do laboratório de transferências"
+        },
+        "classe": "relacionado",
+        "motivo": "Serviço no caminho do Pix e ocorrência dentro do intervalo.",
+        "original_id": null
+      },
+      {
+        "evidencia": {
+          "id": "E07",
+          "servico": "db-contas",
+          "observacao": "Banco: consulta de referência em 20 ms.",
+          "ocorrido_em": "2026-11-03T10:02:00-03:00",
+          "recebido_em": "2026-11-03T10:02:00-03:00",
+          "fonte": "Dados sintéticos do laboratório de transferências"
+        },
+        "classe": "relacionado",
+        "motivo": "Serviço no caminho do Pix e ocorrência dentro do intervalo.",
+        "original_id": null
+      },
+      {
+        "evidencia": {
+          "id": "E08",
+          "servico": "parceiro-externo",
+          "observacao": "Parceiro sem degradação reportada.",
+          "ocorrido_em": "2026-11-03T10:03:00-03:00",
+          "recebido_em": "2026-11-03T10:03:00-03:00",
+          "fonte": "Dados sintéticos do laboratório de transferências"
+        },
+        "classe": "contraponto",
+        "motivo": "Contexto para verificar a hipótese sobre o parceiro.",
+        "original_id": null
+      }
+    ],
+    "lacunas": [
+      "A associação por horário e jornada ainda exige investigação de causa."
+    ],
+    "fila": [
+      {
+        "jornada": "Transferência Pix",
+        "prioridade": "alta",
+        "justificativa": "Falhas na jornada atingiram o limiar de triagem. Taxa observada de 8,00%. O p95 de 900 ms também atingiu o limiar.",
+        "referencias": [
+          "E01",
+          "E02",
+          "E04",
+          "E06",
+          "E09",
+          "E07"
+        ]
+      }
+    ]
+  },
+  "contexto_rca": {
+    "janela": [
+      "2026-11-03T10:00:00-03:00",
+      "2026-11-03T10:05:00-03:00"
+    ],
+    "corte": "2026-11-03T10:06:00-03:00",
+    "taxa_erro": 0.08,
+    "evidencias": [
+      {
+        "id": "E01",
+        "servico": "consulta-limites",
+        "observacao": "C01: pool de limites reduzido de 20 para 8."
+      },
+      {
+        "id": "E02",
+        "servico": "api-transferencias",
+        "observacao": "API: 80 falhas em 1000 solicitações."
+      },
+      {
+        "id": "E04",
+        "servico": "consulta-limites",
+        "observacao": "Limites: 8 conexões ativas e 35 solicitações em espera."
+      },
+      {
+        "id": "E06",
+        "servico": "gateway",
+        "observacao": "Gateway: timeout na jornada."
+      },
+      {
+        "id": "E09",
+        "servico": "db-contas",
+        "observacao": "Banco: CPU 35%; recepção atrasada."
+      },
+      {
+        "id": "E07",
+        "servico": "db-contas",
+        "observacao": "Banco: consulta de referência em 20 ms."
+      }
+    ],
+    "lacunas": [
+      "A associação por horário e jornada ainda exige investigação de causa."
+    ]
+  }
+}
